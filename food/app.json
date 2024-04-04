@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-learn",
-    "slug": "react-native-learn",
+    "name": "food",
+    "slug": "food",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
@@ -11,5 +11,5 @@
     "ios": {
       "supportsTablet": true
     }
-  }
+    }
 }
