@@ -1,10 +1,10 @@
-import { View, Text, StyleSheet, Image, } from "react-native";
+import { Image, StyleSheet, Text, View, } from "react-native";
 
-const ImageDetail = ({title,link}) => {
+const ImageDetail = ({ title, link }) => {
     return (
         <View>
             <Text style={styles.title}>{title}</Text>
-            <Image style={styles.image} source={link}/>
+            <Image style={styles.image} source={link} />
         </View>
     );
 }
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     image: {
         height: 200,
-        width:'auto'
+        width: 'auto'
     }
 })
 
