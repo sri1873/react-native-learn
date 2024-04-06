@@ -1,18 +1,19 @@
 {
   "expo": {
-    "name": "food",
-    "slug": "food",
+    "name": "blog",
+    "slug": "blog",
     "version": "1.0.0",
     "orientation": "portrait",
+    
     "userInterfaceStyle": "light",
+    
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "android": {
-      "package": "com.sri_1873.food"
     }
+  
+    
   }
 }
