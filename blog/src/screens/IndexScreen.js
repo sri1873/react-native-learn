@@ -1,7 +1,7 @@
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useContext } from 'react';
-import { Button, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import BlogContext from '../context/BlogContext';
 
 const IndexScreen = () => {
@@ -10,7 +10,6 @@ const IndexScreen = () => {
 
     return (
         <View>
-            <Button title="Add" onPress={() => navigation.navigate("Create")} />
             <FlatList data={posts}
                 keyExtractor={(post) => post.title}
                 renderItem={({ item }) => {
@@ -27,6 +26,10 @@ const IndexScreen = () => {
             />
         </View >
     );
+}
+
+IndexScreen.screenOptions = () => {
+    return <AntDesign name="delete" size={24} color="black" />
 }
 
 const styles = StyleSheet.create({

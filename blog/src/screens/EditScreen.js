@@ -18,7 +18,7 @@ const EditScreen = ({ route }) => {
                 placeholder="Name of Blog"
                 value={title}
                 onChangeText={txt => setTitle(txt)} />
-            <Text style={styles.label}>Enter Content</Text>                                                                                                                                                                
+            <Text style={styles.label}>Enter Content</Text>
             <TextInput style={styles.input}
                 placeholder="Matter"
                 value={content}

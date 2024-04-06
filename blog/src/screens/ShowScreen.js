@@ -13,9 +13,9 @@ const ShowScreen = ({ route }) => {
     return (
         <View>
             <TouchableOpacity onPress={() => navigation.navigate("Edit", { id })}>
-                <MaterialCommunityIcons name="pencil-outline" size={29} color="black" />
+                <MaterialCommunityIcons name="pencil-outline" size={24} color="black" />
             </TouchableOpacity>
-            <View style={{ borderWidth: 2,margin:20 }}>
+            <View style={{ borderWidth: 2 }}>
                 <Text style={styles.txt}>{post.title}</Text>
                 <Text style={styles.txt}>{post.content}</Text>
             </View>

@@ -14,7 +14,7 @@ const CreateScreen = () => {
             <TextInput style={styles.input} placeholder="Name of Blog" onChangeText={txt => setTitle(txt)} />
             <Text style={styles.label}>Enter Content</Text>
             <TextInput style={styles.input} placeholder="Matter" onChangeText={txt => setContent(txt)} />
-            <Button 
+            <Button
                 title="Create Post"
                 onPress={() => { dispatch({ type: 'create', payload: { title, content } }); navigation.navigate("Index") }} />
         </View>
@@ -22,9 +22,9 @@ const CreateScreen = () => {
 }
 
 const styles = StyleSheet.create({
-    label: { fontSize: 20,margin:10,marginLeft:0},
-    form: {padding:20},
-    input:{borderWidth:1,padding:3,marginBottom:10},
+    label: { fontSize: 20, margin: 10, marginLeft: 0 },
+    form: { padding: 20 },
+    input: { borderWidth: 1, padding: 3, marginBottom: 10 },
 });
 
 export default CreateScreen
