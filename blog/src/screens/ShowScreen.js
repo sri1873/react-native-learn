@@ -1,7 +1,6 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useContext } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import BlogContext from '../context/BlogContext';
 
 const ShowScreen = ({ route }) => {
@@ -12,9 +11,6 @@ const ShowScreen = ({ route }) => {
     const post = posts.find((post) => post.id === id)
     return (
         <View>
-            <TouchableOpacity onPress={() => navigation.navigate("Edit", { id })}>
-                <MaterialCommunityIcons name="pencil-outline" size={24} color="black" />
-            </TouchableOpacity>
             <View style={{ borderWidth: 2 }}>
                 <Text style={styles.txt}>{post.title}</Text>
                 <Text style={styles.txt}>{post.content}</Text>

@@ -11,6 +11,7 @@ import ShowScreen from './src/screens/ShowScreen';
 
 export default function App() {
   const Stack = createNativeStackNavigator()
+
   return (
     <BlogProvider>
       <NavigationContainer>
@@ -24,7 +25,15 @@ export default function App() {
               }
             })}
           />
-          <Stack.Screen name='Show' component={ShowScreen}/>
+          <Stack.Screen name='Show' component={ShowScreen}
+            options={({ navigation,route }) => ({
+              headerRight: () => {
+                return <TouchableOpacity onPress={() => navigation.navigate("Edit", { id:route.params.id })}>
+                  <MaterialCommunityIcons name="pencil-outline" size={29} color="black" />
+                </TouchableOpacity>
+              }
+            })}
+          />
           <Stack.Screen name='Create' component={CreateScreen} />
           <Stack.Screen name='Edit' component={EditScreen} />
         </Stack.Navigator>
